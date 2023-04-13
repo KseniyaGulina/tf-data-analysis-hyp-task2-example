@@ -10,6 +10,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     alpha = 0.05
-    p_value = MMD(compute_kernel = "rbf", gamma = 1).test(x, y)[1]
+    p_value = MMD(compute_kernel = "rbf", gamma = 0.5).test(x, y)[1]
     result = p_value < alpha
     return result
